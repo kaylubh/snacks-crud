@@ -8,6 +8,7 @@
   <p>{{snack.description}}</p>
   <p class="italic">Purchaser: {{snack.purchaser}}</p>
   <p><a href="{% url 'snack_update' snack.pk %}" class="italic underline text-green-600">Edit Snack</a></p>
+  <p><a href="{% url 'snack_delete' snack.pk %}" class="italic underline text-green-600">Remove Snack</a></p>
 </div>
 
 {% endblock main %}
