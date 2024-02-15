@@ -7,6 +7,7 @@
   <h3 class="text-lg font-extrabold">{{snack.name}}</h3>
   <p>{{snack.description}}</p>
   <p class="italic">Purchaser: {{snack.purchaser}}</p>
+  <p><a href="{% url 'snack_update' snack.pk %}" class="italic underline text-green-600">Edit Snack</a></p>
 </div>
 
 {% endblock main %}
