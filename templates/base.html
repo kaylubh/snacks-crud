@@ -1,0 +1,34 @@
+{% load compress %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snacks</title>
+  {% compress css %}
+  <link rel="stylesheet" href="{% static 'src/output.css' %}">
+  {% endcompress %}
+</head>
+<body>
+  
+  <header class="bg-green-700 p-6 text-neutral-50 flex space-x-10 items-center">
+    <h1 class="text-2xl font-extrabold">Super Supreme Snacks</h1>
+    <nav class="flex space-x-4 items-center underline">
+      <a href="{% url 'snack_list' %}">Home</a>
+      <a href="https://github.com/kaylubh" target="_blank">Developer</a>
+    </nav>
+  </header>
+
+  <main>
+    {% block main %}{% endblock main %}
+  </main>
+
+  <footer class="bg-green-700 p-6 text-neutral-50 flex-col space-y-4 items-center font-thin">
+    <p>Super Supreme Snacks</p>
+    <p>A Django and Tailwinds learning project by Caleb Hemphill</p>
+  </footer>
+
+</body>
+</html>

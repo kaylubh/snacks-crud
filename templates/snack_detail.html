@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<div class="flex-col p-4">
+  <h2 class="py-4 text-xl underline font-black">Snack Info</h2>
+  <h3 class="text-lg font-extrabold">{{snack.name}}</h3>
+  <p>{{snack.description}}</p>
+  <p class="italic">Purchaser: {{snack.purchaser}}</p>
+</div>
+
+{% endblock main %}
